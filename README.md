@@ -1,5 +1,7 @@
-# Code Purifier
 
+![Code Purifier Screenshot](screenshot.png)
+
+# Code Purifier
 Code Purifier is a web application designed to remove sensitive information from your code. It ensures that your code is clean and free from any personal or sensitive data before sharing or deploying.
 
 ## Features
