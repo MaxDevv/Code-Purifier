@@ -7,7 +7,7 @@
     let outputCode = $state("");
     function cleanCode(e) {
         if (!inputCode.trim()) return;
-        outputCode = "Purifying...";
+        outputCode = "Purifying... Please refresh page if stuck purifying";
         puter.ai.chat(`You are being used in an API please only respond with the data requested. You are to remmove all sensitive information (including but not limited to: API Keys, Access Tokens, Usernames and Passwords, SSH Keys, Database Credentials, Full Names, Email Addresses, Phone Numbers, Home Addresses, Social Security Numbers (SSNs), National ID Numbers, Credit Card Numbers, Bank Account Details, Cryptocurrency Wallet Keys, Encryption Keys, Certificate Files (.pem, .crt, .key), VPN Configurations, Firewall Rules and Configs, Source Code, Internal Documentation, Internal Emails or Communication Logs, Server IPs and Ports, Environment Variables (.env files), Debug Logs, Backup Files and Database Dumps, Contracts.) From this code, replace the sensitive information with the string "REDACTED_SENSITIVE_INFORMATION". Here is the code: "${inputCode}"`).then((response) => {
             console.log(response);
             outputCode = response.message.content;
