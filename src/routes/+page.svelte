@@ -50,6 +50,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script> -->
 </svelte:head>
 <div class="background"></div>
+<!-- <div class="background"><svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="b" cx="50%" cy="50%" r="50%" fx="21%" fy="74%"><stop offset="0%" stop-color="#45f7ef"/><stop offset="100%" stop-color="rgba(69,122,247,0.2)"/></radialGradient><filter id="a" x="-500" y="-500" width="2000" height="2000" filterUnits="userSpaceOnUse"><feGaussianBlur in="SourceGraphic" stdDeviation="30"/></filter></defs><rect width="100%" height="100%" fill="transparent"/><g filter="url(#a)"><svg width="850" height="850" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" transform="translate(31.301 85.385)"><path fill="url(#b)" d="M368 319.5q-38 69.5-125 82T110 332q-46-82 6-152.5t155.5-108Q375 34 390.5 142T368 319.5Z"/></svg></g><svg width="500" height="90.312" viewBox="0 0 1218 220" fill="none" xmlns="http://www.w3.org/2000/svg" transform="translate(250 454.844)"></svg></svg></div> -->
 <div class="body">
    <div class="navbar">
         <h2>{title} :D</h2>
@@ -76,10 +77,60 @@
     div {
         display: flex;
     }
-    :global(body) {
+    :global(html) {
         flex-direction: column;
         background-color: #252525;
+        overflow: scroll;
+        overflow-x: hidden;
+        /* background-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201000%201000%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CradialGradient%20id%3D%22b%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2250%25%22%20fx%3D%2221%25%22%20fy%3D%2274%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2345f7ef%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22rgba(69%2C122%2C247%2C0.2)%22%2F%3E%3C%2FradialGradient%3E%3Cfilter%20id%3D%22a%22%20x%3D%22-500%22%20y%3D%22-500%22%20width%3D%222000%22%20height%3D%222000%22%20filterUnits%3D%22userSpaceOnUse%22%3E%3CfeGaussianBlur%20in%3D%22SourceGraphic%22%20stdDeviation%3D%2230%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22transparent%22%2F%3E%3Cg%20filter%3D%22url(%23a)%22%3E%3Csvg%20width%3D%22850%22%20height%3D%22850%22%20viewBox%3D%220%200%20500%20500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20transform%3D%22translate(31.301%2085.385)%22%3E%3Cpath%20fill%3D%22url(%23b)%22%20d%3D%22M368%20319.5q-38%2069.5-125%2082T110%20332q-46-82%206-152.5t155.5-108Q375%2034%20390.5%20142T368%20319.5Z%22%2F%3E%3C%2Fsvg%3E%3C%2Fg%3E%3Csvg%20width%3D%22500%22%20height%3D%2290.312%22%20viewBox%3D%220%200%201218%20220%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20transform%3D%22translate(250%20454.844)%22%3E%3C%2Fsvg%3E%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; */
         /* background-color: navy; */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox */
+    }::-webkit-scrollbar {
+    display: none;
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+    .background {
+        position: fixed;
+        opacity: 80%;
+        top: 50%;
+        left: 50%;
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        background: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%201000%201000%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CradialGradient%20id%3D%22b%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2250%25%22%20fx%3D%2221%25%22%20fy%3D%2274%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2345f7ef%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22rgba(69%2C122%2C247%2C0.2)%22%2F%3E%3C%2FradialGradient%3E%3Cfilter%20id%3D%22a%22%20x%3D%22-500%22%20y%3D%22-500%22%20width%3D%222000%22%20height%3D%222000%22%20filterUnits%3D%22userSpaceOnUse%22%3E%3CfeGaussianBlur%20in%3D%22SourceGraphic%22%20stdDeviation%3D%2230%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22transparent%22%2F%3E%3Cg%20filter%3D%22url(%23a)%22%3E%3Csvg%20width%3D%22850%22%20height%3D%22850%22%20viewBox%3D%220%200%20500%20500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20transform%3D%22translate(31.301%2085.385)%22%3E%3Cpath%20fill%3D%22url(%23b)%22%20d%3D%22M368%20319.5q-38%2069.5-125%2082T110%20332q-46-82%206-152.5t155.5-108Q375%2034%20390.5%20142T368%20319.5Z%22%2F%3E%3C%2Fsvg%3E%3C%2Fg%3E%3Csvg%20width%3D%22500%22%20height%3D%2290.312%22%20viewBox%3D%220%200%201218%20220%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20transform%3D%22translate(250%20454.844)%22%3E%3C%2Fsvg%3E%3C%2Fsvg%3E") no-repeat center center;
+        animation: rotateBackground 60s linear infinite;
+        z-index: -1;
+        /* background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox */
+    }::-webkit-scrollbar {
+    display: none;
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+
+    @keyframes rotateBackground {
+        from {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        to {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
     }
 	* {
 		font-family:
