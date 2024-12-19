@@ -66,7 +66,7 @@
         <h5>Removes all sensitive information from your code.</h5>
             <form   onsubmit={(e) => {preventDefault();cleanCode(e);}}>
                 <!-- <CodeBox type="input" /> -->
-                <textarea class="codeEditor" name="" id="" placeholder="Insert Code Here..." bind:value={inputCode} maxlength="5000"></textarea>
+                <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="codeEditor" name="" id="" placeholder="Insert Code Here..." bind:value={inputCode} maxlength="5000"></textarea>
                 <button type="submit">Purify</button>
                 <textarea name="" id="" readonly>{outputCode}</textarea>
             </form>
